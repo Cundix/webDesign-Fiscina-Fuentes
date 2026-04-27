@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container-centrado {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            background-color: #f0f0f0;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+            width: 250px;
+            border-radius: 10px;
+        }
+
+        .card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        /* Instagram Mobile First */
+        .insta-profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: sans-serif;
+        }
+
+        .grid-fotos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            width: 100%;
+        }
+
+        .grid-fotos img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-centrado">
+        <div class="card">
+            <img src="https://via.placeholder.com/80" alt="User">
+            <h3>Nombre Usuario</h3>
+            <p>Ciudad: Buenos Aires</p>
+            <div>
+                <span>100 Seguidores</span> | 
+                <span>50 Likes</span> | 
+                <span>10 Fotos</span>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="insta-profile">
+        <h2>@usuario_insta</h2>
+        <p>Biografía de ejemplo para el perfil de Instagram.</p>
+        <div class="grid-fotos">
+            <img src="https://via.placeholder.com/150" alt="Post 1">
+            <img src="https://via.placeholder.com/150" alt="Post 2">
+            <img src="https://via.placeholder.com/150" alt="Post 3">
+            <img src="https://via.placeholder.com/150" alt="Post 4">
+            <img src="https://via.placeholder.com/150" alt="Post 5">
+            <img src="https://via.placeholder.com/150" alt="Post 6">
+        </div>
+    </div>
+</body>
+</html>
