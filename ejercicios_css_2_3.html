@@ -5,20 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicios CSS Parte 2 y 3</title>
     <style>
+        /* Ejercicio 1: Centrar un div con display flex */
         .container-centrado {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 300px;
             background-color: #f0f0f0;
+            margin-bottom: 20px;
         }
 
+        /* Ejercicio 2: Tarjeta de usuario */
         .card {
             border: 1px solid #ccc;
             padding: 20px;
             text-align: center;
             width: 250px;
             border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         .card img {
@@ -26,14 +31,75 @@
             height: 80px;
             border-radius: 50%;
             margin-bottom: 15px;
+            object-fit: cover;
         }
 
-        /* Instagram Mobile First */
-        .insta-profile {
+        .card-stats {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Ejercicio 3: Instagram Mobile First */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+        }
+
+        .insta-profile {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding-bottom: 20px;
+        }
+
+        .insta-header {
+            display: flex;
+            padding: 20px;
             align-items: center;
-            font-family: sans-serif;
+        }
+
+        .insta-header img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 20px;
+            object-fit: cover;
+            border: 2px solid #ddd;
+            padding: 2px;
+        }
+
+        .insta-stats {
+            display: flex;
+            gap: 15px;
+        }
+
+        .insta-stats div {
+            text-align: center;
+        }
+
+        .insta-stats div span {
+            display: block;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .insta-bio {
+            padding: 0 20px 20px 20px;
+        }
+        
+        .insta-bio h2 {
+            margin: 0 0 5px 0;
+            font-size: 16px;
+        }
+
+        .insta-bio p {
+            margin: 0;
+            font-size: 14px;
         }
 
         .grid-fotos {
@@ -48,18 +114,33 @@
             aspect-ratio: 1 / 1;
             object-fit: cover;
         }
+
+        /* Responsive: Ajustes para pantallas más grandes */
+        @media (min-width: 600px) {
+            .insta-header img {
+                width: 150px;
+                height: 150px;
+                margin-right: 40px;
+            }
+            .insta-stats div span {
+                font-size: 18px;
+            }
+            .grid-fotos {
+                gap: 5px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container-centrado">
         <div class="card">
-            <img src="https://via.placeholder.com/80" alt="User">
+            <img src="Imagenes/foto de perfil.webp" alt="User">
             <h3>Nombre Usuario</h3>
             <p>Ciudad: Buenos Aires</p>
-            <div>
-                <span>100 Seguidores</span> | 
-                <span>50 Likes</span> | 
-                <span>10 Fotos</span>
+            <div class="card-stats">
+                <span><b>100</b> Seg</span>
+                <span><b>50</b> Likes</span>
+                <span><b>6</b> Fotos</span>
             </div>
         </div>
     </div>
@@ -67,15 +148,25 @@
     <hr>
 
     <div class="insta-profile">
-        <h2>@usuario_insta</h2>
-        <p>Biografía de ejemplo para el perfil de Instagram.</p>
+        <div class="insta-header">
+            <img src="Imagenes/Instagram_logo.png" alt="Logo">
+            <div class="insta-stats">
+                <div><span>6</span> public.</div>
+                <div><span>1M</span> seg.</div>
+                <div><span>10</span> seguidos</div>
+            </div>
+        </div>
+        <div class="insta-bio">
+            <h2>@usuario_insta</h2>
+            <p>Biografía de ejemplo para el perfil de Instagram. Fotografía y estilo de vida.</p>
+        </div>
         <div class="grid-fotos">
-            <img src="https://via.placeholder.com/150" alt="Post 1">
-            <img src="https://via.placeholder.com/150" alt="Post 2">
-            <img src="https://via.placeholder.com/150" alt="Post 3">
-            <img src="https://via.placeholder.com/150" alt="Post 4">
-            <img src="https://via.placeholder.com/150" alt="Post 5">
-            <img src="https://via.placeholder.com/150" alt="Post 6">
+            <img src="Imagenes/amigos.jpg" alt="Post 1">
+            <img src="Imagenes/caballo.jpg" alt="Post 2">
+            <img src="Imagenes/comida.jpg" alt="Post 3">
+            <img src="Imagenes/libros apilados.avif" alt="Post 4">
+            <img src="Imagenes/taza_de_cafe.avif" alt="Post 5">
+            <img src="Imagenes/trabajando.jpg" alt="Post 6">
         </div>
     </div>
 </body>
