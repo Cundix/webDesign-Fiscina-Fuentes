@@ -1,0 +1,9 @@
+.animado {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: transform 0.3s;
+}
+.animado:hover {
+    transform: scale(1.2);
+}
